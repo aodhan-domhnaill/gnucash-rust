@@ -160,7 +160,6 @@ set (engine_SOURCES
   gnc-datetime.cpp
   gnc-engine.c
   gnc-euro.c
-  gnc-event.c
   gnc-features.cpp
   gnc-hooks.c
   gnc-int128.cpp
@@ -242,6 +241,7 @@ ExternalProject_Add(
     libgnucash_rust
     DOWNLOAD_COMMAND ""
     CONFIGURE_COMMAND ""
+    UPDATE_COMMAND cargo build COMMAND cargo build --release
     BUILD_COMMAND cargo build COMMAND cargo build --release
     BINARY_DIR "${CMAKE_SOURCE_DIR}"
     INSTALL_COMMAND ""
