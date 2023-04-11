@@ -6,3 +6,6 @@ version = "0.1.0"
 name = "gnucash_rust"
 crate-type = ["staticlib"]
 path = "./libgnucash/lib.rs"
+
+[dependencies]
+libc = "0.2.1"

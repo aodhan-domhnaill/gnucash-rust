@@ -15,4 +15,4 @@ pub const QOF_EVENT_DESTROY: QofEventId = QOF_MAKE_EVENT(2);
 pub const QOF_EVENT_ADD: QofEventId = QOF_MAKE_EVENT(3);
 pub const QOF_EVENT_REMOVE: QofEventId = QOF_MAKE_EVENT(4);
 pub const QOF_EVENT__LAST: QofEventId = QOF_MAKE_EVENT(QOF_EVENT_BASE - 1);
-pub const QOF_EVENT_ALL: QofEventId = (0xff);
+pub const QOF_EVENT_ALL: QofEventId = 0xff;

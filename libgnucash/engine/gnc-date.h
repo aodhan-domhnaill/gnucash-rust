@@ -179,6 +179,7 @@ struct tm* gnc_localtime (const time64 *secs);
  *  The time is adjusted for the current local time zone.
  */
 struct tm* gnc_localtime_r (const time64 *secs, struct tm* time);
+struct tm* gnc_localtime_r_DEPRECATED (const time64 *secs, struct tm* time);
 
 /** \brief fill out a time struct from a 64-bit time value
  *  \param secs: Seconds since 00:00:01 UTC 01 January 1970 (negative values

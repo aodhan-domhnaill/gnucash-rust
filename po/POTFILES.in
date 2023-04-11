@@ -39,8 +39,12 @@ bindings/python/example_scripts/simple_sqlite_create.py
 bindings/python/example_scripts/str_methods.py
 bindings/python/function_class.py
 bindings/python/gnucash_business.py
+bindings/python/gnucash_core.c
+bindings/python/gnucash_core_c.py
 bindings/python/gnucash_core.py
 bindings/python/__init__.py
+bindings/python/sw_app_utils.py
+bindings/python/sw_core_utils.py
 borrowed/goffice/go-charmap-sel.c
 borrowed/goffice/go-glib-extras.c
 borrowed/goffice/go-optionmenu.c
