@@ -1,0 +1,8 @@
+[package]
+name = "gnucash_rust"
+version = "0.1.0"
+
+[lib]
+name = "gnucash_rust"
+crate-type = ["staticlib"]
+path = "./libgnucash/lib.rs"
