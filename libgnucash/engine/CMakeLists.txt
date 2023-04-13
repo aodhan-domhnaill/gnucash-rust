@@ -230,30 +230,24 @@ target_sources(gnc-engine
         $<$<BOOL:${WIN32}>:${CMAKE_SOURCE_DIR}/borrowed/libc/strptime.c>
 )
 
-# Enable ExternalProject CMake module
-include(ExternalProject)
+include(FetchContent)
 
-# Set default ExternalProject root directory
-set_directory_properties(PROPERTIES EP_PREFIX ${CMAKE_BINARY_DIR}/Rust)
+FetchContent_Declare(
+    Corrosion
+    GIT_REPOSITORY https://github.com/corrosion-rs/corrosion.git
+    GIT_TAG v0.3 # Optionally specify a commit hash, version tag or branch here
+)
+FetchContent_MakeAvailable(Corrosion)
 
-# Add rust_example as a CMake target
-ExternalProject_Add(
-    libgnucash_rust
-    DOWNLOAD_COMMAND ""
-    CONFIGURE_COMMAND ""
-    UPDATE_COMMAND cargo build COMMAND cargo build --release
-    BUILD_COMMAND cargo build COMMAND cargo build --release
-    BINARY_DIR "${CMAKE_SOURCE_DIR}"
-    INSTALL_COMMAND ""
-    LOG_BUILD ON)
+# Import targets defined in a package or workspace manifest `Cargo.toml` file
+corrosion_import_crate(MANIFEST_PATH "${CMAKE_SOURCE_DIR}/Cargo.toml")
 
 # Add dependency on iso-4217-currencies.c
-add_dependencies (gnc-engine iso-4217-c libgnucash_rust)
+add_dependencies (gnc-engine iso-4217-c)
 
 target_link_libraries(gnc-engine
+    gnucash_rust
     gnc-core-utils
-    debug "${CMAKE_SOURCE_DIR}/target/debug/libgnucash_rust.a"
-    optimized "${CMAKE_SOURCE_DIR}/target/release/libgnucash_rust.a"
     ${Boost_DATE_TIME_LIBRARY}
     ${Boost_REGEX_LIBRARY}
     ${ICU4C_I18N_LDFLAGS}
