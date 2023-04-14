@@ -43,6 +43,8 @@ bindings/python/gnucash_core.c
 bindings/python/gnucash_core_c.py
 bindings/python/gnucash_core.py
 bindings/python/__init__.py
+bindings/python/sw_app_utils.py
+bindings/python/sw_core_utils.py
 borrowed/goffice/go-charmap-sel.c
 borrowed/goffice/go-glib-extras.c
 borrowed/goffice/go-optionmenu.c
@@ -216,6 +218,7 @@ gnucash/gnucash-cli.cpp
 gnucash/gnucash-commands.cpp
 gnucash/gnucash-core-app.cpp
 gnucash/gnucash.cpp
+gnucash/gnucash-gresources.c
 gnucash/gnucash-locale-windows.c
 gnucash/gschemas/org.gnucash.GnuCash.dialogs.business.gschema.xml.in
 gnucash/gschemas/org.gnucash.GnuCash.dialogs.checkprinting.gschema.xml.in
@@ -303,6 +306,7 @@ gnucash/html/gnc-html-history.c
 gnucash/html/gnc-html-webkit1.c
 gnucash/html/gnc-html-webkit2.c
 gnucash/html/html.scm
+gnucash/import-export/aqb/aqb-gresources.c
 gnucash/import-export/aqb/assistant-ab-initial.c
 gnucash/import-export/aqb/assistant-ab-initial.glade
 gnucash/import-export/aqb/dialog-ab-daterange.c
@@ -369,6 +373,7 @@ gnucash/import-export/ofx/gnc-ofx-import.c
 gnucash/import-export/ofx/gnc-plugin-ofx.c
 gnucash/import-export/ofx/gnc-plugin-ofx.ui
 gnucash/import-export/ofx/gschemas/org.gnucash.GnuCash.dialogs.import.ofx.gschema.xml.in
+gnucash/import-export/ofx/ofx-gresources.c
 gnucash/import-export/qif-imp/assistant-qif-import.c
 gnucash/import-export/qif-imp/dialog-account-picker.c
 gnucash/import-export/qif-imp/gnc-plugin-qif-import.c

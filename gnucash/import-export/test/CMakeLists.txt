@@ -9,7 +9,7 @@ set(GENERIC_IMPORT_TEST_INCLUDE_DIRS
   ${GUILE_INCLUDE_DIRS}
 )
 
-set(GENERIC_IMPORT_TEST_LIBS gnc-generic-import gnc-test-engine test-core)
+set(GENERIC_IMPORT_TEST_LIBS gnc-generic-import gnc-test-engine gnucash_rust test-core)
 
 gnc_add_test_with_guile(test-import-parse test-import-parse.c
   GENERIC_IMPORT_TEST_INCLUDE_DIRS GENERIC_IMPORT_TEST_LIBS
