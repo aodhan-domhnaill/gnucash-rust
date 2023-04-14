@@ -27,7 +27,7 @@ set(IMPORT_ACCOUNT_MATCHER_TEST_INCLUDE_DIRS
   ${GTEST_INCLUDE_DIR}
   )
 
-set(IMPORT_ACCOUNT_MATCHER_TEST_LIBS gnc-generic-import gnc-engine test-core gtest)
+set(IMPORT_ACCOUNT_MATCHER_TEST_LIBS gnc-generic-import gnc-engine gnucash_rust test-core gtest)
 gnc_add_test(test-import-account-matcher gtest-import-account-matcher.cpp
   IMPORT_ACCOUNT_MATCHER_TEST_INCLUDE_DIRS IMPORT_ACCOUNT_MATCHER_TEST_LIBS)
 

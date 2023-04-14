@@ -82,7 +82,7 @@ add_library	(gnc-backend-xml-utils
   ${backend_xml_utils_noinst_HEADERS}
 )
 
-target_link_libraries(gnc-backend-xml-utils gnc-engine ${LIBXML2_LDFLAGS} ${ZLIB_LDFLAGS})
+target_link_libraries(gnc-backend-xml-utils gnc-engine gnucash_rust ${LIBXML2_LDFLAGS} ${ZLIB_LDFLAGS})
 
 target_include_directories (gnc-backend-xml-utils
   PUBLIC  ${LIBXML2_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}
