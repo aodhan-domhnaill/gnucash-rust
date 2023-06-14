@@ -8,7 +8,7 @@ set(BACKEND_SQL_TEST_INCLUDE_DIRS
 
 set(test_backend_sql_SOURCES test-sqlbe.cpp utest-gnc-backend-sql.cpp)
 
-set(BACKEND_SQL_TEST_LIBS gnc-backend-sql gnc-engine test-core)
+set(BACKEND_SQL_TEST_LIBS gnc-backend-sql gnc-engine gnucash_rust test-core)
 
 set_dist_list(test_backend_sql_DIST ${test_backend_sql_SOURCES} CMakeLists.txt
   test-column-types.cpp)

@@ -5,7 +5,7 @@ set(CSV_IMP_TEST_INCLUDE_DIRS
   ${CMAKE_SOURCE_DIR}/libgnucash/engine
   ${CMAKE_SOURCE_DIR}/common/test-core
 )
-set(CSV_IMP_TEST_LIBS gnc-csv-import gnc-engine test-core)
+set(CSV_IMP_TEST_LIBS gnc-csv-import gnc-engine gnucash_rust test-core)
 
 # This test does not run in Win32
 if (NOT WIN32)

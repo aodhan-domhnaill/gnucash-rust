@@ -160,7 +160,6 @@ set (engine_SOURCES
   gnc-datetime.cpp
   gnc-engine.c
   gnc-euro.c
-  gnc-event.c
   gnc-features.cpp
   gnc-hooks.c
   gnc-int128.cpp
@@ -231,10 +230,23 @@ target_sources(gnc-engine
         $<$<BOOL:${WIN32}>:${CMAKE_SOURCE_DIR}/borrowed/libc/strptime.c>
 )
 
+include(FetchContent)
+
+FetchContent_Declare(
+    Corrosion
+    GIT_REPOSITORY https://github.com/corrosion-rs/corrosion.git
+    GIT_TAG v0.3 # Optionally specify a commit hash, version tag or branch here
+)
+FetchContent_MakeAvailable(Corrosion)
+
+# Import targets defined in a package or workspace manifest `Cargo.toml` file
+corrosion_import_crate(MANIFEST_PATH "${CMAKE_SOURCE_DIR}/Cargo.toml")
+
 # Add dependency on iso-4217-currencies.c
 add_dependencies (gnc-engine iso-4217-c)
 
 target_link_libraries(gnc-engine
+    gnucash_rust
     gnc-core-utils
     ${Boost_DATE_TIME_LIBRARY}
     ${Boost_REGEX_LIBRARY}

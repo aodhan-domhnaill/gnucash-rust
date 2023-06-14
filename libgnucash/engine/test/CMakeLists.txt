@@ -8,7 +8,7 @@ set(ENGINE_TEST_INCLUDE_DIRS
   ${CMAKE_SOURCE_DIR}/common/test-core  # for unittest-support.h
 )
 
-set(ENGINE_TEST_LIBS gnc-engine gnc-test-engine test-core ${LIBXML2_LDFLAGS} -lm)
+set(ENGINE_TEST_LIBS gnc-engine gnucash_rust gnc-test-engine test-core ${LIBXML2_LDFLAGS} -lm)
 
 macro(add_engine_test _TARGET _SOURCE_FILES)
   gnc_add_test(${_TARGET} "${_SOURCE_FILES}" ENGINE_TEST_INCLUDE_DIRS ENGINE_TEST_LIBS)

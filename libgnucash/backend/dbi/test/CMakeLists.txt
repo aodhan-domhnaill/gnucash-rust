@@ -9,7 +9,7 @@ set(BACKEND_DBI_TEST_INCLUDE_DIRS
   ${CMAKE_SOURCE_DIR}/common/test-core
   ${LIBDBI_INCLUDE_PATH}
 )
-set(BACKEND_DBI_TEST_LIBS gnc-backend-sql gnc-engine gnc-test-engine test-core ${Boost_REGEX_LIBRARY} ${LIBDBI_LIBRARY})
+set(BACKEND_DBI_TEST_LIBS gnc-backend-sql gnc-engine gnucash_rust gnc-test-engine test-core ${Boost_REGEX_LIBRARY} ${LIBDBI_LIBRARY})
 
 set(test_dbi_backend_SOURCES
   test-backend-dbi.cpp

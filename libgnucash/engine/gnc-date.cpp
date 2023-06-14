@@ -111,7 +111,7 @@ gnc_localtime (const time64 *secs)
 }
 
 struct tm*
-gnc_localtime_r (const time64 *secs, struct tm* time)
+gnc_localtime_r_DEPRECATED (const time64 *secs, struct tm* time)
 {
     try
     {

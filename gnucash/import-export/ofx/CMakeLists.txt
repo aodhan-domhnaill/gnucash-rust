@@ -36,7 +36,7 @@ if (WITH_OFX)
     set(OFX_LIBSTDCXX "-lstdc++")
   endif()
 
-  target_link_libraries(gncmod-ofx gnc-generic-import gnc-engine gnc-app-utils gnc-core-utils
+  target_link_libraries(gncmod-ofx gnc-generic-import gnc-engine gnucash_rust gnc-app-utils gnc-core-utils
                         gnc-gnome-utils gnc-gnome gnc-module
                         ${OFX_EXPORT_SYMBOLS} ${LIBOFX_LDFLAGS} ${OFX_LIBSTDCXX})
 

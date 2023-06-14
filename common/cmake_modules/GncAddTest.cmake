@@ -78,7 +78,7 @@ function(gnc_add_test _TARGET _SOURCE_FILES TEST_INCLUDE_VAR_NAME TEST_LIBS_VAR_
     set(HAVE_ENV_VARS TRUE)
   endif()
   set(TEST_INCLUDE_DIRS ${${TEST_INCLUDE_VAR_NAME}})
-  set(TEST_LIBS ${${TEST_LIBS_VAR_NAME}})
+  set(TEST_LIBS ${${TEST_LIBS_VAR_NAME}} gnucash_rust)
   set_source_files_properties (${_SOURCE_FILES} PROPERTIES OBJECT_DEPENDS ${CONFIG_H})
   add_executable(${_TARGET} EXCLUDE_FROM_ALL ${_SOURCE_FILES})
   target_link_libraries(${_TARGET} ${TEST_LIBS})
